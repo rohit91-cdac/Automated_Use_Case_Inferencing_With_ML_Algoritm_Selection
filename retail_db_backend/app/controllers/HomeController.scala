@@ -63,6 +63,7 @@ class HomeController @Inject()(override val controllerComponents: ControllerComp
     val key_file = multipart.dataParts.get("retail_file_type").get.head
     println(s"Received File for Key $key_file")
     val all_lines = scala.io.Source.fromFile(file).getLines.drop(1)
+//    println(s"Number of Lines received is ${all_lines.length}")
     val retail_class_list = key_file match {
       case "A_Store_Sale" => all_lines.map {
         each_line =>
@@ -96,47 +97,69 @@ class HomeController @Inject()(override val controllerComponents: ControllerComp
             discount = split_line(11).toFloat,
             profit = split_line(12).toFloat
           )
-      }
+      }.toList
       case "C_Store_Sale" => all_lines.map {
         each_line =>
           val split_line = each_line.split(',')
-          retail_store_v3(
-            invoice = Integer.parseInt(split_line(0)),
-            stock_code = split_line(1),
-            description = split_line(2),
-            quantity = Integer.parseInt(split_line(3)),
-            invoice_date = split_line(4),
-            price = split_line(5).toFloat,
-            customer_id = Integer.parseInt(split_line(6)),
-            country = split_line(7)
-          )
-      }
+          try {
+            retail_store_v3(
+              invoice = Integer.parseInt(split_line(0)),
+              stock_code = split_line(1),
+              description = split_line(2),
+              quantity = Integer.parseInt(split_line(3)),
+              invoice_date = split_line(4),
+              price = split_line(5).toFloat,
+              customer_id = if (split_line(6).isEmpty()) 0.0.toFloat else split_line(6).toFloat,
+              country = split_line(7)
+            )
+          }
+          catch {
+            case _: Throwable => retail_store_v3(0,"NA","NA",0,"NA",0.0.toFloat,0.0.toFloat,"NA")
+          }
+      }.toList
       case "D_Store_Sale" => all_lines.map {
         each_line =>
-          val split_line = each_line.split(',')
-          retail_store_v4(
-            uri = split_line(0),
-            name = split_line(1),
-            sku = split_line(2),
-            selling_price = split_line(3).toFloat,
-            original_price = split_line(4),
-            currency = split_line(5),
-            availability = split_line(6),
-            color = split_line(7),
-            category = split_line(8),
-            source = split_line(9),
-            source_website = split_line(10),
-            breadcrumbs = split_line(11),
-            description = split_line(12),
-            brand = split_line(13),
-            images = split_line(14),
-            country = split_line(15),
-            language = split_line(16),
-            average_rating = split_line(17).toFloat,
-            review_count = Integer.parseInt(split_line(18)),
-            crawled_at = split_line(19)
-          )
-      }
+          try {
+            val split_line_replaced = each_line.replace(",f_auto,","_f_auto_")
+            val split_line = split_line_replaced.split(',')
+            retail_store_v4(
+              uri = split_line(0),
+              name = split_line(1),
+              sku = split_line(2),
+              selling_price = split_line(3).toFloat,
+              original_price = split_line(4),
+              currency = split_line(5),
+              availability = split_line(6),
+              color = split_line(7),
+              category = split_line(8),
+              source = split_line(9),
+              source_website = split_line(10),
+              breadcrumbs = split_line(11),
+              description = split_line(12),
+              brand = split_line(13),
+              images = split_line(14).replace("_f_auto_",",f_auto,"),
+              country = split_line(15),
+              language = split_line(16),
+              average_rating = split_line(17).toFloat,
+              review_count = Integer.parseInt(split_line(18)),
+              crawled_at = split_line(19)
+            )
+          } catch {
+            case e: Throwable =>
+              val split_line_replaced = each_line.replace(",f_auto,","_f_auto_")
+//              println(s"Error is -> ${e.printStackTrace()}")
+//              println(s"Error Line -> ${each_line.split(',').toList}")
+              println(s"Actual Line -> ${each_line}")
+//              retail_store_v4("", ",", "", 0.0.toFloat, "", "", "", "", "", "", "", "", "", "", "", "", "", 0.0.toFloat, 0, "")
+              println(s" Values are \n 1 - ${split_line_replaced.split(',')(0)}\n 2 - ${split_line_replaced.split(',')(1)}\n 3- ${split_line_replaced.split(',')(2)}" +
+                s"\n 4 - ${split_line_replaced.split(',')(3)} \n 5 - ${split_line_replaced.split(',')(4)} \n 6 - ${split_line_replaced.split(',')(5)}\n 7 - ${split_line_replaced.split(',')(6)}" +
+                s"\n 8 - ${split_line_replaced.split(',')(7)} \n 9 -${split_line_replaced.split(',')(8)} \n 10 - ${split_line_replaced.split(',')(9)}\n 11 - ${split_line_replaced.split(',')(10)}" +
+                s"\n 12 -${split_line_replaced.split(',')(11)} \n 13 - ${split_line_replaced.split(',')(12)} \n 14 - ${split_line_replaced.split(',')(13)}\n 15 - ${split_line_replaced.split(',')(14)}" +
+                s"\n 16 - ${split_line_replaced.split(',')(15)} \n 17 - ${split_line_replaced.split(',')(16)} \n 18 - ${split_line_replaced.split(',')(17)}\n 19 - ${split_line_replaced.split(',')(18)}" +
+                s"\n 20 - ${split_line_replaced.split(',')(19)}")
+              System.exit(1)
+          }
+      }.toList
       case _ => List[retail_store_v1]()
     }
 
@@ -148,11 +171,14 @@ class HomeController @Inject()(override val controllerComponents: ControllerComp
         val bson_coll = Await.result(dbFromConnection(connection = connection_local, collection_name = "Retail_Store_Two"), atMost = Duration(10, "seconds"))
         bson_coll.insert.many(retail_class_list.asInstanceOf[List[retail_store_v2]])
       case "C_Store_Sale" =>
+        val filtered_list = retail_class_list.filter(x => x.asInstanceOf[retail_store_v3].invoice != 0)
         val bson_coll = Await.result(dbFromConnection(connection = connection_local, collection_name = "Online_Store_One"), atMost = Duration(10, "seconds"))
-        bson_coll.insert.many(retail_class_list.asInstanceOf[List[retail_store_v3]])
+        bson_coll.insert.many(filtered_list.asInstanceOf[List[retail_store_v3]])
       case "D_Store_Sale" =>
+        val filtered_list = retail_class_list.filter(x => !x.asInstanceOf[retail_store_v4].crawled_at.isEmpty())
+        println(s"Total Count of Records being Inserted is ${filtered_list.length}")
         val bson_coll = Await.result(dbFromConnection(connection = connection_local, collection_name = "Online_Store_Two"), atMost = Duration(10, "seconds"))
-        bson_coll.insert.many(retail_class_list.asInstanceOf[List[retail_store_v4]])
+        bson_coll.insert.many(filtered_list.asInstanceOf[List[retail_store_v4]])
     }
 
     insert_map.onComplete{
