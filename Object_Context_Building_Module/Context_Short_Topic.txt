@@ -1,0 +1,19 @@
+African_grey   chest   slot   lighter   hook
+bookcase   bakery   wig   teapot
+candle   basketball   velvet   necklace   hook   cup   chest
+strawberry   trilobite  stove   box_turtle
+bookcase   orange   Bedlington_terrier   bakery   backpack
+African_grey   backpack   restaurant   hammerhead
+wooden_spoon   velvet   African_grey   screen
+teddy   jellyfish   cash_machine   backpack
+African_grey   chest   slot   lighter   hook
+coffeepot   soup_bowl   orange   beer_glass   crutch   English_setter
+peacock   cock   mailbox   backpack   scale   Christmas_stocking
+desk   backpack   restaurant   space_shuttle
+iron   necklace   chest   iron
+chest   slot   lighter   hook   iron
+chain  orange   bassinet   carpenter's_kit   palace
+Pomeranian   hotdog   tabby   water_bottle
+slot   indigo_bunting   paper_towel   convertible
+cup   fig   doormat   flagpole
+slot   lotion   chest   wallet

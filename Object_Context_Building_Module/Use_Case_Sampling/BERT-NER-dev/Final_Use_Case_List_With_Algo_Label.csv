@@ -1,0 +1,133 @@
+,Use_Cases,ML_Algo
+0,Recommend products similar to  AEROREADY juniors soccer tee,K_Means
+1,Forecast the sales of the product AEROREADY juniors soccer tee for next quarter,LSTM
+2,Generate catalogue of similar type of products AEROREADY juniors soccer tee,DBSCAN
+3,Project the price of product AEROREADY juniors soccer tee for next quarter,ARIMA
+4,Predict the popularity of the product AEROREADY juniors soccer tee for next quarter,XgBoost
+5,Do Market Basket Analysis for the product AEROREADY juniors soccer tee,AssociativeLearning
+6,Recommend products similar to  adidas lots backpack,K_Means
+7,Forecast the sales of the product adidas lots backpack for next quarter,LSTM
+8,Generate catalogue of similar type of products adidas lots backpack,DBSCAN
+9,Project the price of product adidas lots backpack for next quarter,ARIMA
+10,Predict the popularity of the product adidas lots backpack for next quarter,XgBoost
+11,Do Market Basket Analysis for the product adidas lots backpack,AssociativeLearning
+12,Recommend products similar to  adidas Badge of Sport cotton hoodie,K_Means
+13,Forecast the sales of the product adidas Badge of Sport cotton hoodie for next quarter,LSTM
+14,Generate catalogue of similar type of products adidas Badge of Sport cotton hoodie,DBSCAN
+15,Project the price of product adidas Badge of Sport cotton hoodie for next quarter,ARIMA
+16,Predict the popularity of the product adidas Badge of Sport cotton hoodie for next quarter,XgBoost
+17,Do Market Basket Analysis for the product adidas Badge of Sport cotton hoodie,AssociativeLearning
+18,Recommend products similar to  adidas adidas backpack gear,K_Means
+19,Forecast the sales of the product adidas adidas backpack gear for next quarter,LSTM
+20,Generate catalogue of similar type of products adidas adidas backpack gear,DBSCAN
+21,Project the price of product adidas adidas backpack gear for next quarter,ARIMA
+22,Predict the popularity of the product adidas adidas backpack gear for next quarter,XgBoost
+23,Do Market Basket Analysis for the product adidas adidas backpack gear,AssociativeLearning
+24,Recommend products similar to  French product waste,K_Means
+25,Forecast the sales of the product French product waste for next quarter,LSTM
+26,Generate catalogue of similar type of products French product waste,DBSCAN
+27,Project the price of product French product waste for next quarter,ARIMA
+28,Predict the popularity of the product French product waste for next quarter,XgBoost
+29,Do Market Basket Analysis for the product French product waste,AssociativeLearning
+30,Recommend products similar to  juniors soccer tee,K_Means
+31,Forecast the sales of the product juniors soccer tee for next quarter,LSTM
+32,Generate catalogue of similar type of products juniors soccer tee,DBSCAN
+33,Project the price of product juniors soccer tee for next quarter,ARIMA
+34,Predict the popularity of the product juniors soccer tee for next quarter,XgBoost
+35,Do Market Basket Analysis for the product juniors soccer tee,AssociativeLearning
+36,Recommend products similar to  adidas FC Bayern cotton hoodie,K_Means
+37,Forecast the sales of the product adidas FC Bayern cotton hoodie for next quarter,LSTM
+38,Generate catalogue of similar type of products adidas FC Bayern cotton hoodie,DBSCAN
+39,Project the price of product adidas FC Bayern cotton hoodie for next quarter,ARIMA
+40,Predict the popularity of the product adidas FC Bayern cotton hoodie for next quarter,XgBoost
+41,Do Market Basket Analysis for the product adidas FC Bayern cotton hoodie,AssociativeLearning
+42,Recommend products similar to  lots backpack,K_Means
+43,Forecast the sales of the product lots backpack for next quarter,LSTM
+44,Generate catalogue of similar type of products lots backpack,DBSCAN
+45,Project the price of product lots backpack for next quarter,ARIMA
+46,Predict the popularity of the product lots backpack for next quarter,XgBoost
+47,Do Market Basket Analysis for the product lots backpack,AssociativeLearning
+48,Recommend products similar to  Adicolor product waste,K_Means
+49,Forecast the sales of the product Adicolor product waste for next quarter,LSTM
+50,Generate catalogue of similar type of products Adicolor product waste,DBSCAN
+51,Project the price of product Adicolor product waste for next quarter,ARIMA
+52,Predict the popularity of the product Adicolor product waste for next quarter,XgBoost
+53,Do Market Basket Analysis for the product Adicolor product waste,AssociativeLearning
+54,Recommend products similar to  French juniors soccer tee,K_Means
+55,Forecast the sales of the product French juniors soccer tee for next quarter,LSTM
+56,Generate catalogue of similar type of products French juniors soccer tee,DBSCAN
+57,Project the price of product French juniors soccer tee for next quarter,ARIMA
+58,Predict the popularity of the product French juniors soccer tee for next quarter,XgBoost
+59,Do Market Basket Analysis for the product French juniors soccer tee,AssociativeLearning
+60,Recommend products similar to  panel debut,K_Means
+61,Forecast the sales of the product panel debut for next quarter,LSTM
+62,Generate catalogue of similar type of products panel debut,DBSCAN
+63,Project the price of product panel debut for next quarter,ARIMA
+64,Predict the popularity of the product panel debut for next quarter,XgBoost
+65,Do Market Basket Analysis for the product panel debut,AssociativeLearning
+66,Recommend products similar to  cotton hoodie,K_Means
+67,Forecast the sales of the product cotton hoodie for next quarter,LSTM
+68,Generate catalogue of similar type of products cotton hoodie,DBSCAN
+69,Project the price of product cotton hoodie for next quarter,ARIMA
+70,Predict the popularity of the product cotton hoodie for next quarter,XgBoost
+71,Do Market Basket Analysis for the product cotton hoodie,AssociativeLearning
+72,Recommend products similar to  Adicolor Classics 3-Stripes Windbreaker product waste,K_Means
+73,Forecast the sales of the product Adicolor Classics 3-Stripes Windbreaker product waste for next quarter,LSTM
+74,Generate catalogue of similar type of products Adicolor Classics 3-Stripes Windbreaker product waste,DBSCAN
+75,Project the price of product Adicolor Classics 3-Stripes Windbreaker product waste for next quarter,ARIMA
+76,Predict the popularity of the product Adicolor Classics 3-Stripes Windbreaker product waste for next quarter,XgBoost
+77,Do Market Basket Analysis for the product Adicolor Classics 3-Stripes Windbreaker product waste,AssociativeLearning
+78,Recommend products similar to  adidas backpack gear,K_Means
+79,Forecast the sales of the product adidas backpack gear for next quarter,LSTM
+80,Generate catalogue of similar type of products adidas backpack gear,DBSCAN
+81,Project the price of product adidas backpack gear for next quarter,ARIMA
+82,Predict the popularity of the product adidas backpack gear for next quarter,XgBoost
+83,Do Market Basket Analysis for the product adidas backpack gear,AssociativeLearning
+84,Recommend products similar to  tee comfy leggings stretch kiddo,K_Means
+85,Forecast the sales of the product tee comfy leggings stretch kiddo for next quarter,LSTM
+86,Generate catalogue of similar type of products tee comfy leggings stretch kiddo,DBSCAN
+87,Project the price of product tee comfy leggings stretch kiddo for next quarter,ARIMA
+88,Predict the popularity of the product tee comfy leggings stretch kiddo for next quarter,XgBoost
+89,Do Market Basket Analysis for the product tee comfy leggings stretch kiddo,AssociativeLearning
+90,Recommend products similar to  French cotton hoodie,K_Means
+91,Forecast the sales of the product French cotton hoodie for next quarter,LSTM
+92,Generate catalogue of similar type of products French cotton hoodie,DBSCAN
+93,Project the price of product French cotton hoodie for next quarter,ARIMA
+94,Predict the popularity of the product French cotton hoodie for next quarter,XgBoost
+95,Do Market Basket Analysis for the product French cotton hoodie,AssociativeLearning
+96,Recommend products similar to  Lil Stripe French adidas backpack gear,K_Means
+97,Forecast the sales of the product Lil Stripe French adidas backpack gear for next quarter,LSTM
+98,Generate catalogue of similar type of products Lil Stripe French adidas backpack gear,DBSCAN
+99,Project the price of product Lil Stripe French adidas backpack gear for next quarter,ARIMA
+100,Predict the popularity of the product Lil Stripe French adidas backpack gear for next quarter,XgBoost
+101,Do Market Basket Analysis for the product Lil Stripe French adidas backpack gear,AssociativeLearning
+102,Recommend products similar to  hood kangaroo pocket help,K_Means
+103,Forecast the sales of the product hood kangaroo pocket help for next quarter,LSTM
+104,Generate catalogue of similar type of products hood kangaroo pocket help,DBSCAN
+105,Project the price of product hood kangaroo pocket help for next quarter,ARIMA
+106,Predict the popularity of the product hood kangaroo pocket help for next quarter,XgBoost
+107,Do Market Basket Analysis for the product hood kangaroo pocket help,AssociativeLearning
+108,Recommend products similar to  adidas tee comfy leggings stretch kiddo,K_Means
+109,Forecast the sales of the product adidas tee comfy leggings stretch kiddo for next quarter,LSTM
+110,Generate catalogue of similar type of products adidas tee comfy leggings stretch kiddo,DBSCAN
+111,Project the price of product adidas tee comfy leggings stretch kiddo for next quarter,ARIMA
+112,Predict the popularity of the product adidas tee comfy leggings stretch kiddo for next quarter,XgBoost
+113,Do Market Basket Analysis for the product adidas tee comfy leggings stretch kiddo,AssociativeLearning
+114,Recommend products similar to  adidas FC Bayern panel debut,K_Means
+115,Forecast the sales of the product adidas FC Bayern panel debut for next quarter,LSTM
+116,Generate catalogue of similar type of products adidas FC Bayern panel debut,DBSCAN
+117,Project the price of product adidas FC Bayern panel debut for next quarter,ARIMA
+118,Predict the popularity of the product adidas FC Bayern panel debut for next quarter,XgBoost
+119,Do Market Basket Analysis for the product adidas FC Bayern panel debut,AssociativeLearning
+120,Recommend products similar to  adidas Disney cotton hoodie,K_Means
+121,Forecast the sales of the product adidas Disney cotton hoodie for next quarter,LSTM
+122,Generate catalogue of similar type of products adidas Disney cotton hoodie,DBSCAN
+123,Project the price of product adidas Disney cotton hoodie for next quarter,ARIMA
+124,Predict the popularity of the product adidas Disney cotton hoodie for next quarter,XgBoost
+125,Do Market Basket Analysis for the product adidas Disney cotton hoodie,AssociativeLearning
+126,Recommend products similar to  Adicolor Classics 3-Stripes Windbreaker cotton hoodie,K_Means
+127,Forecast the sales of the product Adicolor Classics 3-Stripes Windbreaker cotton hoodie for next quarter,LSTM
+128,Generate catalogue of similar type of products Adicolor Classics 3-Stripes Windbreaker cotton hoodie,DBSCAN
+129,Project the price of product Adicolor Classics 3-Stripes Windbreaker cotton hoodie for next quarter,ARIMA
+130,Predict the popularity of the product Adicolor Classics 3-Stripes Windbreaker cotton hoodie for next quarter,XgBoost
+131,Do Market Basket Analysis for the product Adicolor Classics 3-Stripes Windbreaker cotton hoodie,AssociativeLearning

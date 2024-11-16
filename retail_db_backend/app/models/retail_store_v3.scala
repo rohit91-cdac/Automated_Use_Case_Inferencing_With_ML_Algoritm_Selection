@@ -12,7 +12,7 @@ case class retail_store_v3(
                           quantity: Int,
                           invoice_date: String,
                           price: Float,
-                          customer_id: Int,
+                          customer_id: Float,
                           country: String
                           )
 
@@ -28,7 +28,7 @@ object retail_store_v3 {
       quantity <- doc.getAsTry[Int]("quantity")
       invoice_date <- doc.getAsTry[String]("invoice_date")
       price <- doc.getAsTry[Float]("price")
-      customer_id <- doc.getAsTry[Int]("customer_id")
+      customer_id <- doc.getAsTry[Float]("customer_id")
       country <- doc.getAsTry[String]("country")
     } yield new retail_store_v3(invoice = invoice, stock_code = stock_code, description = description, quantity = quantity,
       invoice_date = invoice_date, price = price, customer_id = customer_id, country = country)
